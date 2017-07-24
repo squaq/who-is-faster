@@ -1,0 +1,28 @@
+<!--https://api.myjson.com/bins/13kbnn-->
+
+<div class="container">
+   <h2 class="text-primary">Angular 4 test</h2>
+   
+    <div class="table-responsive">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>code</th>
+                    <th>from</th>
+                    <th>to</th>
+                    <th>duration</th>
+                    <th>company</th>
+                </tr>
+            </thead>
+            <tbody *ngFor="let ob of jsondata">
+                <tr>
+                    <th scope="row">{{ob.flight_code}}</th>
+                    <td>{{ob.origin.title}}({{ob.origin.initials}})</td>
+                    <td>{{ob.destination.title}}({{ob.destination.initials}})</td>
+                    <td>{{ob.duration}}</td>
+                    <td>{{ob.company.title}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
